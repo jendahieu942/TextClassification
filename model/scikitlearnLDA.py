@@ -5,8 +5,8 @@ import pandas as pd
 import re, gensim
 import logging
 
-from models.preprocess import get_data
-from models.stopwords import Utils, remove_stopwords
+from preprocess.preprocess import get_data
+from preprocess.stopwords import Utils, remove_stopwords
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 

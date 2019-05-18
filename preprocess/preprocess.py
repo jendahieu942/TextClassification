@@ -24,11 +24,18 @@ def get_data(folder_path):
                 lines = ' '.join(lines)
 
                 X.append(lines)
-                y.append(path)
+                y.append(path.lower())
 
     return X, y
 
-#
+
+def get_labeled_docs(folder_path):
+    X, y = get_data(folder_path)
+    docs = []
+    for i in range(len(y)):
+        docs.append((X[i], [y[i]]))
+    return docs
+
 # test_path = os.path.join(dir_path, 'test_full')
 # train_path = os.path.join(dir_path, 'train_full')
 # processed_path = os.path.join(dir_path, 'data_processed')

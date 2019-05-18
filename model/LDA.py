@@ -1,16 +1,14 @@
 import numpy
 import os
 import logging
-from operator import itemgetter
 
 from gensim import corpora
 from gensim import models
 from sklearn import linear_model
-from sklearn.metrics import f1_score
 from sklearn.preprocessing import StandardScaler
 
-from models.preprocess import get_data
-from models.stopwords import Utils
+from preprocess.preprocess import get_data
+from preprocess.stopwords import Utils
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 # vietnamese stop words list
